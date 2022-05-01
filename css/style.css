@@ -104,6 +104,10 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   border: 1px solid #000;
 }
 
+.input-error{
+  border: 2px solid red;
+}
+
 .form-control {
   box-shadow: none;
   border-radius: 0;
