@@ -1,3 +1,10 @@
+if (sessionStorage.getItem("user") !== null) {
+  $(".top-header .top-menu .login").empty();
+  $(".top-header .top-menu .login").append(
+    `<a href="profile-details.html"><i class="tf-ion-android-person"></i> MinhPhuong</a>`,
+  );
+}
+
 const checkFirstName = () => {
   let valid = false;
   const firstName = $("#first-name").val().trim();
@@ -134,6 +141,7 @@ $("#login-form").submit(function (e) {
   let isFormValid = isEmailValid && isPasswordValid;
 
   if (isFormValid) {
+    sessionStorage.setItem("user", "MinhPhuong");
     this.submit();
   }
 });
