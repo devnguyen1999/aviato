@@ -3,7 +3,12 @@ if (sessionStorage.getItem("user") !== null) {
   $(".top-header .top-menu .login").append(
     `<a href="profile-details.html"><i class="tf-ion-android-person"></i> MinhPhuong</a>`,
   );
-}
+ } else {
+  $(".top-header .top-menu .login").empty();
+  $(".top-header .top-menu .login").append(
+    `<a href="login.html"><i class="tf-ion-android-person"></i> Login</a>`,
+  );
+ }
 
 const checkFirstName = () => {
   let valid = false;
@@ -145,3 +150,8 @@ $("#login-form").submit(function (e) {
     this.submit();
   }
 });
+
+const logout = () => {
+  sessionStorage.removeItem("user");
+  location.replace("index.html");
+}

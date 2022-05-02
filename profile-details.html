@@ -248,27 +248,97 @@
 	<section class="user-dashboard page-wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<ul class="list-inline dashboard-menu text-center">
-						<li><a href="dashboard.html">Dashboard</a></li>
-						<li><a href="order.html">Orders</a></li>
-						<li><a href="address.html">Address</a></li>
-						<li><a class="active" href="profile-details.html">Profile Details</a></li>
+				<div class="col-md-12 tab-common">
+					<ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<a href="#!" class="nav-link active" id="pills-profile-details-tab" data-bs-toggle="pill"
+								data-bs-target="#pills-profile-details" type="button" role="tab" aria-controls="pills-profile-details"
+								aria-selected="true">Profile Details</a>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a href="#!" class="nav-link" id="pills-orders-tab" data-bs-toggle="pill" data-bs-target="#pills-orders"
+								type="button" role="tab" aria-controls="pills-orders" aria-selected="false">Orders</a>
+						</li>
+						<li class="nav-item" role="presentation" onclick="logout()">
+							<a href="#!" class="nav-link" id="btn-logout" type="button"><i class="tf-ion-log-out"></i> Logout</a>
+						</li>
 					</ul>
-					<div class="dashboard-wrapper dashboard-user-profile">
-						<div class="media">
-							<div class="pull-left text-center" href="#!">
-								<img class="media-object user-img" src="images/avater.jpg" alt="Image">
-								<a href="#x" class="btn btn-transparent mt-20">Change Image</a>
+					<div class="tab-content patternbg" id="pills-tabContent">
+						<div class="tab-pane fade show active dashboard-wrapper dashboard-user-profile" id="pills-profile-details"
+							role="tabpanel" aria-labelledby="pills-profile-details-tab">
+							<div class="media d-flex m-3">
+								<div class="text-center" href="#!">
+									<img class="media-object user-img d-block" src="images/avater.jpg" alt="Image">
+									<a href="#x" class="btn btn-transparent mt-20">Change Image</a>
+								</div>
+								<div class="media-body">
+									<ul class="user-profile-list">
+										<li class="mb-2"><span>Full Name:</span>Le Minh Phuong</li>
+										<li class="mb-2"><span>Country:</span>Vietnam</li>
+										<li class="mb-2"><span>Email:</span>minhphuong@example.com</li>
+										<li class="mb-2"><span>Phone:</span>034 234 0234</li>
+										<li class="mb-2"><span>Date of Birth:</span>May, 17, 2001</li>
+									</ul>
+								</div>
 							</div>
-							<div class="media-body">
-								<ul class="user-profile-list">
-									<li><span>Full Name:</span>Johanna Doe</li>
-									<li><span>Country:</span>USA</li>
-									<li><span>Email:</span>mail@gmail.com</li>
-									<li><span>Phone:</span>+880123123</li>
-									<li><span>Date of Birth:</span>Dec , 22 ,1991</li>
-								</ul>
+						</div>
+						<div class="tab-pane fade dashboard-wrapper user-dashboard" id="pills-orders" role="tabpanel"
+							aria-labelledby="pills-orders-tab">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Order ID</th>
+											<th>Date</th>
+											<th>Items</th>
+											<th>Total Price</th>
+											<th>Status</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>#451231</td>
+											<td>Mar 25, 2016</td>
+											<td>2</td>
+											<td>$99.00</td>
+											<td><span class="badge bg-primary">Processing</span></td>
+											<td><a href="#!">View</a></td>
+										</tr>
+										<tr>
+											<td>#451231</td>
+											<td>Mar 25, 2016</td>
+											<td>3</td>
+											<td>$150.00</td>
+											<td><span class="badge bg-success">Completed</span></td>
+											<td><a href="#!">View</a></td>
+										</tr>
+										<tr>
+											<td>#451231</td>
+											<td>Mar 25, 2016</td>
+											<td>3</td>
+											<td>$150.00</td>
+											<td><span class="badge bg-danger">Canceled</span></td>
+											<td><a href="#!">View</a></td>
+										</tr>
+										<tr>
+											<td>#451231</td>
+											<td>Mar 25, 2016</td>
+											<td>2</td>
+											<td>$99.00</td>
+											<td><span class="badge bg-info">On Hold</span></td>
+											<td><a href="#!">View</a></td>
+										</tr>
+										<tr>
+											<td>#451231</td>
+											<td>Mar 25, 2016</td>
+											<td>3</td>
+											<td>$150.00</td>
+											<td><span class="badge bg-warning">Pending</span></td>
+											<td><a href="#!">View</a></td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>

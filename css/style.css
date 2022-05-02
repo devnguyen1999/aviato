@@ -264,6 +264,11 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   width: 100%;
 }
 
+.img-circle {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 400px) {
   .category-box {
     min-height: 250px;
@@ -1688,8 +1693,6 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .dashboard-wrapper {
-  border: 1px solid #dedede;
-  margin-top: 30px;
   padding: 20px;
 }
 
@@ -1711,7 +1714,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .dashboard-user-profile .user-profile-list {
-  margin-top: 30px;
+  margin: 10px;
   padding-left: 30px;
 }
 
@@ -1722,7 +1725,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 .dashboard-user-profile .user-profile-list span {
   font-weight: bold;
   margin-right: 5px;
-  width: 100px;
+  width: 150px;
   display: inline-block;
 }
 
